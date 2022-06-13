@@ -1,0 +1,746 @@
+{
+	"info": {
+		"_postman_id": "a0b70dd6-7484-4664-a27b-cc14a45124d8",
+		"name": "IN6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "findAllCompanies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}company/findAllCompanies",
+							"host": [
+								"{{host}}company"
+							],
+							"path": [
+								"findAllCompanies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findOneCompany",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}company/findOneCompany/michaeljonathan_98@hotmail.com",
+							"host": [
+								"{{host}}company"
+							],
+							"path": [
+								"findOneCompany",
+								"michaeljonathan_98@hotmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "existsEmail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}company/existsEmail/michaeljonathan_98@hotmail.com",
+							"host": [
+								"{{host}}company"
+							],
+							"path": [
+								"existsEmail",
+								"michaeljonathan_98@hotmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "existsPhone",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}company/existsPhone/(88) 9 9282-5455",
+							"host": [
+								"{{host}}company"
+							],
+							"path": [
+								"existsPhone",
+								"(88) 9 9282-5455"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verifyActivation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}company/verifyActivation/michaeljonathan_98@hotmail.com",
+							"host": [
+								"{{host}}company"
+							],
+							"path": [
+								"verifyActivation",
+								"michaeljonathan_98@hotmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "activate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}activateAccount/activate/1",
+							"host": [
+								"{{host}}activateAccount"
+							],
+							"path": [
+								"activate",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verifyActivationEmailSended",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}company/verifyActivationEmailSended/michaeljonathan_98@hotmail.com",
+							"host": [
+								"{{host}}company"
+							],
+							"path": [
+								"verifyActivationEmailSended",
+								"michaeljonathan_98@hotmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendEmail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}activateAccount/sendEmail/1/michaeljonathan_98@hotmail.com/localhost:8080",
+							"host": [
+								"{{host}}activateAccount"
+							],
+							"path": [
+								"sendEmail",
+								"1",
+								"michaeljonathan_98@hotmail.com",
+								"localhost:8080"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCompany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Subway Surfers\",\r\n    \"password\": \"12345678\",\r\n    \"email\": \"emailTeste@hotmail.com\",\r\n    \"phone\": \"(88) 9 9999-9999\",\r\n    \"cityDTO\": {\r\n        \"id\": 721,\r\n        \"stateDTO\": {\r\n            \"id\": 6\r\n        }\r\n    },\r\n    \"businessSectorDTO\": {\r\n        \"id\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}company/createCompany",
+							"host": [
+								"{{host}}company"
+							],
+							"path": [
+								"createCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "isAuthenticated",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBcHBsaWNhdGlvbiIsInN1YiI6ImVtYWlsVGVzdGVAaG90bWFpbC5jb20iLCJpYXQiOjE2NDIzODc1MDEsImV4cCI6MTY0MjM4OTMwMX0.iCriLvJFo6HwnNlJzZYrtsKrb0E6vfSy-Wqdgwu0CrM\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}company/isAuthenticated",
+							"host": [
+								"{{host}}company"
+							],
+							"path": [
+								"isAuthenticated"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "authenticateCompany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"emailTeste@hotmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}company/authenticateCompany",
+							"host": [
+								"{{host}}company"
+							],
+							"path": [
+								"authenticateCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "authenticateCompanyNonExpireToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"emailTeste@hotmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}company/authenticateCompanyNonExpireToken",
+							"host": [
+								"{{host}}company"
+							],
+							"path": [
+								"authenticateCompanyNonExpireToken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCompany",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Subway Surfers\",\r\n    \"cnpj\": \"25.584.892/2877-23\",\r\n    \"email\": \"emailTeste@hotmail.com\",\r\n    \"phone\": \"(88) 9 9999-9999\",\r\n    \"about\": \"Só mais uma empresa qualquer por ai pelo mundo a fora\",\r\n    \"desktopNotifications\": false,\r\n    \"emailNotifications\": false,\r\n    \"whatsappNotifications\": false,\r\n    \"businessSectorDTO\": {\r\n        \"id\": 1\r\n    },\r\n    \"cityDTO\": {\r\n        \"id\": 721,\r\n        \"stateDTO\": {\r\n            \"id\": 6\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}company/updateCompany",
+							"host": [
+								"{{host}}company"
+							],
+							"path": [
+								"updateCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCompanyPassword",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"michaeljonathan_98@hotmail.com\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}company/updateCompanyPassword",
+							"host": [
+								"{{host}}company"
+							],
+							"path": [
+								"updateCompanyPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCompanyEmail",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}company/updateCompanyEmail/michaeljonathan_98@hotmail.com/emailTeste77@hotmail.com",
+							"host": [
+								"{{host}}company"
+							],
+							"path": [
+								"updateCompanyEmail",
+								"michaeljonathan_98@hotmail.com",
+								"emailTeste77@hotmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCompany",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}company/deleteCompany/1",
+							"host": [
+								"{{host}}company"
+							],
+							"path": [
+								"deleteCompany",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vacancy",
+			"item": [
+				{
+					"name": "findAllVacancies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}vacancy/findAllVacancies",
+							"host": [
+								"{{host}}vacancy"
+							],
+							"path": [
+								"findAllVacancies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllVacanciesByCompany",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}vacancy/findAllVacanciesByCompany/michaeljonathan_98@hotmail.com",
+							"host": [
+								"{{host}}vacancy"
+							],
+							"path": [
+								"findAllVacanciesByCompany",
+								"michaeljonathan_98@hotmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findOneVacancy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}vacancy/findOneVacancy/1",
+							"host": [
+								"{{host}}vacancy"
+							],
+							"path": [
+								"findOneVacancy",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createVacancy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Backend Developer\",\r\n    \"immediateHiring\": true,\r\n    \"needExperience\": true,\r\n    \"disabledPeople\": false,\r\n    \"forStudents\": false,\r\n    \"workSchedule\": \"Segunda a sexta, 08:00h a 18:00h\",\r\n    \"salary\": \"5.500,00\",\r\n    \"salaryToNegotiate\": false,\r\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan aliquam orci non interdum. Nunc non metus sit amet tortor cursus interdum. Etiam at tellus consectetur quam sollicitudin dictum ut non nisi. Nullam accumsan, odio ac efficitur lobortis, arcu tellus dignissim erat, et porta dui risus id lectus. Sed vitae nisi pharetra, suscipit felis vitae, luctus diam. Nulla congue ipsum eu libero volutpat gravida. Aenean ac condimentum enim, id semper nunc.\\n\\nSed accumsan aliquam orci non interdum. Nunc non metus sit amet tortor cursus interdum. Etiam at tellus consectetur quam sollicitudin dictum ut non nisi. Nullam accumsan, odio ac efficitur lobortis, arcu tellus dignissim erat, et porta dui risus id lectus.\\n\\nPraesent tempus cursus:\\n\\n- Integer semper porta lorem ut elementum enim bibendum, euismod dolor sit amet, euismod turpis.\\n- Aliquam efficitur scelerisque euismod. Nunc dignissim faucibus blandit. Aenean porttitor nisl sit amet efficitur pharetra.\\n- Onec sed pulvinar lacus, eget interdum purus. Phasellus blandit lectus eget mi fermentum tincidunt.\\n- Nam imperdiet tempor fringilla.\\n- Curabitur egestas lacus orci, a eleifend orci laoreet sed. In eget elit enim. Morbi varius pretium sollicitudin. Nunc efficitur ut lectus a laoreet.\\n- Sed mollis interdum interdum.\\n- Nullam ut varius nulla. Etiam ut sapien felis. Praesent sem sem, tincidunt vitae elit sed, bibendum viverra nibh. Maecenas tempus sapien a fringilla dapibus.\\n- Quisque pretium consectetur arcu ac molestie. Mauris sagittis elit magna, non placerat enim faucibus eu.\\n- Aliquam mattis, tellus sit amet scelerisque consectetur, nisl purus venenatis felis, in condimentum erat dolor sit amet turpis.\",\r\n    \"benefits\": \"- Phasellus dui justo, dapibus non nibh sit amet;\\n- Imperdiet accumsan metus;\\n- Nunc gfrevida libero;\\n- Egestas aliquam;\\n- Aliquam condimentum;\\n- Id maximus tortor ornare sit amet;\\n- Nunc urna est, sodales sit amet lacus et, bibendum vulputate libero;\\n- Etiam scelerisque;\\n- Cras quis neque eu magna egestas tristique;\\n- Mauris mollis id dui id sagittis;\\n- Nullam porta libero velit, eu pellentesque nunc consequat nec;\\n- Etiam blandit, erat id consectetur fermentum;\\n- Leo dignissim.\\n- Nunc gfrevida libero;\\n- Egestas aliquam;\\n- Aliquam condimentum;\\n- Id maximus tortor ornare sit amet;\\n- Nunc urna est, sodales sit amet lacus et, bibendum vulputate libero;\",\r\n    \"typeJobDTO\": {\r\n        \"id\": 1\r\n    },\r\n    \"typeOfWorkloadDTO\": {\r\n        \"id\": 1\r\n    },\r\n    \"typeOfPayDTO\": {\r\n        \"id\": 1\r\n    },\r\n    \"cityDTO\": {\r\n        \"id\": 721,\r\n        \"stateDTO\": {\r\n            \"id\": 6\r\n        }\r\n    },\r\n    \"companyDTOInput\": {\r\n        \"id\": 1,\r\n        \"cityDTO\": {\r\n            \"id\": 1,\r\n            \"stateDTO\": {\r\n                \"id\": 1\r\n            }\r\n        },\r\n        \"businessSectorDTO\": {\r\n            \"id\": 1\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}vacancy/createVacancy",
+							"host": [
+								"{{host}}vacancy"
+							],
+							"path": [
+								"createVacancy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateVacancy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"name\": \"Frontend Developer\",\r\n    \"immediateHiring\": true,\r\n    \"needExperience\": true,\r\n    \"disabledPeople\": false,\r\n    \"forStudents\": false,\r\n    \"vacancyStatus\": 2,\r\n    \"workSchedule\": \"Segunda a sexta, 08:00h a 18:00h\",\r\n    \"salary\": \"5.500,00\",\r\n    \"salaryToNegotiate\": false,\r\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan aliquam orci non interdum. Nunc non metus sit amet tortor cursus interdum. Etiam at tellus consectetur quam sollicitudin dictum ut non nisi. Nullam accumsan, odio ac efficitur lobortis, arcu tellus dignissim erat, et porta dui risus id lectus. Sed vitae nisi pharetra, suscipit felis vitae, luctus diam. Nulla congue ipsum eu libero volutpat gravida. Aenean ac condimentum enim, id semper nunc.\\n\\nSed accumsan aliquam orci non interdum. Nunc non metus sit amet tortor cursus interdum. Etiam at tellus consectetur quam sollicitudin dictum ut non nisi. Nullam accumsan, odio ac efficitur lobortis, arcu tellus dignissim erat, et porta dui risus id lectus.\\n\\nPraesent tempus cursus:\\n\\n- Integer semper porta lorem ut elementum enim bibendum, euismod dolor sit amet, euismod turpis.\\n- Aliquam efficitur scelerisque euismod. Nunc dignissim faucibus blandit. Aenean porttitor nisl sit amet efficitur pharetra.\\n- Onec sed pulvinar lacus, eget interdum purus. Phasellus blandit lectus eget mi fermentum tincidunt.\\n- Nam imperdiet tempor fringilla.\\n- Curabitur egestas lacus orci, a eleifend orci laoreet sed. In eget elit enim. Morbi varius pretium sollicitudin. Nunc efficitur ut lectus a laoreet.\\n- Sed mollis interdum interdum.\\n- Nullam ut varius nulla. Etiam ut sapien felis. Praesent sem sem, tincidunt vitae elit sed, bibendum viverra nibh. Maecenas tempus sapien a fringilla dapibus.\\n- Quisque pretium consectetur arcu ac molestie. Mauris sagittis elit magna, non placerat enim faucibus eu.\\n- Aliquam mattis, tellus sit amet scelerisque consectetur, nisl purus venenatis felis, in condimentum erat dolor sit amet turpis.\",\r\n    \"benefits\": \"- Phasellus dui justo, dapibus non nibh sit amet;\\n- Imperdiet accumsan metus;\\n- Nunc gfrevida libero;\\n- Egestas aliquam;\\n- Aliquam condimentum;\\n- Id maximus tortor ornare sit amet;\\n- Nunc urna est, sodales sit amet lacus et, bibendum vulputate libero;\\n- Etiam scelerisque;\\n- Cras quis neque eu magna egestas tristique;\\n- Mauris mollis id dui id sagittis;\\n- Nullam porta libero velit, eu pellentesque nunc consequat nec;\\n- Etiam blandit, erat id consectetur fermentum;\\n- Leo dignissim.\\n- Nunc gfrevida libero;\\n- Egestas aliquam;\\n- Aliquam condimentum;\\n- Id maximus tortor ornare sit amet;\\n- Nunc urna est, sodales sit amet lacus et, bibendum vulputate libero;\",\r\n    \"typeJobDTO\": {\r\n        \"id\": 1\r\n    },\r\n    \"typeOfWorkloadDTO\": {\r\n        \"id\": 1\r\n    },\r\n    \"typeOfPayDTO\": {\r\n        \"id\": 1\r\n    },\r\n    \"cityDTO\": {\r\n        \"id\": 721,\r\n        \"stateDTO\": {\r\n            \"id\": 6\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}vacancy/updateVacancy",
+							"host": [
+								"{{host}}vacancy"
+							],
+							"path": [
+								"updateVacancy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteVacancy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}vacancy/deleteVacancy/2",
+							"host": [
+								"{{host}}vacancy"
+							],
+							"path": [
+								"deleteVacancy",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Candidate",
+			"item": [
+				{
+					"name": "findAllCandidates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}candidate/findAllCandidates",
+							"host": [
+								"{{host}}candidate"
+							],
+							"path": [
+								"findAllCandidates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findOneCandidate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}candidate/findOneCandidate/999.070.713-92",
+							"host": [
+								"{{host}}candidate"
+							],
+							"path": [
+								"findOneCandidate",
+								"999.070.713-92"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllCandidatesByVacancy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}candidate/findAllCandidatesByVacancy/1",
+							"host": [
+								"{{host}}candidate"
+							],
+							"path": [
+								"findAllCandidatesByVacancy",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCandidate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cpf\": \"999.070.713-92\",\r\n    \"name\": \"Michael\",\r\n    \"lastName\": \"Jonathan\",\r\n    \"email\": \"michaeljonathan_98@hotmail.com\",\r\n    \"phone\": \"88 9 9282-5455\",\r\n    \"occupation\": \"Motorista\",\r\n    \"whatsapp\": \"88 9 9282-5455\",\r\n    \"cityDTO\": {\r\n        \"id\": 1,\r\n        \"stateDTO\": {\r\n            \"id\": 1\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}candidate/createCandidate/1",
+							"host": [
+								"{{host}}candidate"
+							],
+							"path": [
+								"createCandidate",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Business Sector",
+			"item": [
+				{
+					"name": "findAllBusinessSector",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}businessSector/findAllBusinessSector",
+							"host": [
+								"{{host}}businessSector"
+							],
+							"path": [
+								"findAllBusinessSector"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "State",
+			"item": [
+				{
+					"name": "findAllStates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}state/findAllStates",
+							"host": [
+								"{{host}}state"
+							],
+							"path": [
+								"findAllStates"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "City",
+			"item": [
+				{
+					"name": "findAllCitiesByState",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}city/findAllCitiesByState/2",
+							"host": [
+								"{{host}}city"
+							],
+							"path": [
+								"findAllCitiesByState",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
